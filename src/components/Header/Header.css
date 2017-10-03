@@ -1,0 +1,7 @@
+.header {
+    position: fixed;
+    background-color: rgba(2, 2, 2, .5);
+    height: 3vh;
+    padding: 20px;
+    color: white;
+}

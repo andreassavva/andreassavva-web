@@ -1,0 +1,6 @@
+.home {
+  flex: 1 1 auto;
+  background-image: url('../../images/background.JPG');
+  background-size: cover;
+  height: 100vh;
+}
