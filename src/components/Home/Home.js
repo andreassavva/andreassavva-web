@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import './Home.css';
+import HeadImg from '../../images/headimage.png';
 
 class Home extends Component {
   render() {
     return (
       <div className="home">
-        <pre>
-          contact me: andreas.k.savva@gmail.com
-        </pre>
+        <div>
+          <div className="textHi">Hi</div>
+          <div className="text">I am<br />Andreas</div>
+        </div>
+        <img className="headImage" src={HeadImg} alt="Profile"/>
       </div>
     );
   }
