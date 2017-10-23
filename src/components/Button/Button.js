@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './Button.css';
 
 class Button extends Component {
   constructor(props) {
@@ -7,13 +8,19 @@ class Button extends Component {
     this.scrollTo = this.scrollTo.bind(this);
   }
 
-  scrollTo(scroll) {
-    console.log(scroll);
+  scrollTo() {
+    window.scrollTo({
+      top: this.props.scroll,
+      behavior: 'smooth',
+    });
   }
 
   render() {
     return(
-      <button onClick={this.scrollTo(this.props.scroll)} value={this.props.value}/>
+      <button
+        onClick={this.scrollTo}
+        className="button"
+      >{this.props.value}</button>
     );
   }
 }

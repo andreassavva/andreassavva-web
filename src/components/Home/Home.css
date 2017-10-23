@@ -3,23 +3,33 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: black;
+  background-color: #111111;
   height: 100vh;
 }
 
 .headImage {
-  height: calc((40vh + 20vw));
-  width: calc((40vh + 20vw));
+  height: calc((70vh + 30vw) / 2);
+  width: calc((70vh + 30vw) / 2);
 }
 
 .text {
+  text-align: right;
   font-size: calc(5vh + 5vw);
   font-family: Impact, Charcoal, sans-serif;
   color: white;
 }
 
 .textHi {
+  text-align: right;
   font-size: calc(7vh + 7vw);
   font-family: Impact, Charcoal, sans-serif;
   color: yellow;
+}
+
+@media (max-width: 700px) {
+  .home {
+    flex-direction: column;
+  }
+
+
 }

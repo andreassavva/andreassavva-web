@@ -1,4 +1,8 @@
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   position: fixed;
   background-color: rgba(2, 2, 2, .5);
   height: 3vh;
