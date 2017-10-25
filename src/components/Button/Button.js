@@ -20,6 +20,7 @@ class Button extends Component {
       <button
         onClick={this.scrollTo}
         className="button"
+        style={(this.props.border) && {border: '2px solid white'}}
       >{this.props.value}</button>
     );
   }
@@ -28,6 +29,7 @@ class Button extends Component {
 Button.propTypes = {
   value: PropTypes.string,
   scroll: PropTypes.number,
+  border: PropTypes.bool,
 };
 
 export default Button;

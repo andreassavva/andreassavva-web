@@ -8,7 +8,7 @@ class Header extends Component {
       <div className="header">
         <Button scroll={0} value="HOME" />
         <Button scroll={document.documentElement.clientHeight} value="SKILLSET" />
-        <Button scroll={document.documentElement.clientHeight} value="LET'S TALK" />
+        <Button scroll={document.documentElement.clientHeight} value="LET'S TALK" border />
       </div>
     );
   }
