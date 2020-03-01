@@ -11,18 +11,22 @@ class Button extends Component {
   scrollTo() {
     window.scrollTo({
       top: this.props.scroll,
-      behavior: 'smooth',
+      behavior: 'smooth'
     });
   }
 
   render() {
-    {/*<a href={`#${this.props.scroll}`}>{this.props.value}</a>*/}
-    return(
-    <button
-    onClick={this.scrollTo}
-    className="button"
-    style={(this.props.border) && {border: '2px solid white'}}
-    >{this.props.value}</button>
+    {
+      /*<a href={`#${this.props.scroll}`}>{this.props.value}</a>*/
+    }
+    return (
+      <button
+        onClick={this.scrollTo}
+        className="button"
+        style={this.props.border && { border: '2px solid white' }}
+      >
+        {this.props.value}
+      </button>
     );
   }
 }
@@ -31,7 +35,7 @@ Button.propTypes = {
   value: PropTypes.string,
   scroll: PropTypes.number,
   section: PropTypes.string,
-  border: PropTypes.bool,
+  border: PropTypes.bool
 };
 
 export default Button;
