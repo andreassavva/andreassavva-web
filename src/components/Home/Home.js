@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Home.css';
 import HeadImg from '../../images/headimage.png';
 
@@ -8,9 +8,12 @@ class Home extends Component {
       <div className="home">
         <div>
           <div className="text-big">HI</div>
-          <div className="text">I AM ANDREAS<br />A FRONT-END DEVELOPER</div>
+          <div className="text">
+            I AM ANDREAS
+            <br />A FRONT-END DEVELOPER
+          </div>
         </div>
-        <img className="headImage" src={HeadImg} alt="Profile"/>
+        <img className="headImage" src={HeadImg} alt="Profile" />
       </div>
     );
   }
