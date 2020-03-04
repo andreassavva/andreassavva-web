@@ -1,13 +1,16 @@
 // @flow
 import * as React from 'react';
 import './Header.css';
-import { Button } from '../Button/Button';
+import { HeaderButton } from '../HeaderButton/HeaderButton';
 
 export const Header = () => (
   <div className="header">
-    <Button scroll={0} text="HOME" />
-    <Button scroll={document.documentElement?.clientHeight} text="SKILLSET" />
-    <Button
+    <HeaderButton scroll={0} text="HOME" />
+    <HeaderButton
+      scroll={document.documentElement?.clientHeight}
+      text="SKILLSET"
+    />
+    <HeaderButton
       scroll={document.documentElement?.clientHeight}
       text="LET'S TALK"
       border

@@ -10,14 +10,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && yarn flow"
     }
   },
   "lint-staged": {
     "src/**/*.js": [
       "yarn prettier --single-quote --write",
-      "git add --all",
-      "yarn flow"
+      "git add --all"
     ]
   },
   "dependencies": {

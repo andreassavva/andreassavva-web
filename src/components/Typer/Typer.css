@@ -1,0 +1,17 @@
+.container {
+  font-size: calc(2vh + 2vw);
+  font-family: monospace;
+  color: yellow;
+  line-height: 9vh;
+}
+
+.cursor {
+  border-left: 0.1em solid;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

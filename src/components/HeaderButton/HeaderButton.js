@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import './Button.css';
+import './HeaderButton.css';
 
 type Props = {|
   text: string,
@@ -8,12 +8,12 @@ type Props = {|
   border?: boolean
 |};
 
-export const Button = (props: Props) => {
+export const HeaderButton = (props: Props) => {
   const { text, scroll, border } = props;
 
   const scrollTo = () => {
     window.scrollTo({
-      top: scroll,
+      top: scroll || 0,
       behavior: 'smooth'
     });
   };
