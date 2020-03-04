@@ -1,41 +1,30 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react';
 import './Button.css';
 
-class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.scrollTo = this.scrollTo.bind(this);
-  }
+type Props = {|
+  text: string,
+  scroll: ?number,
+  border?: boolean
+|};
 
-  scrollTo() {
+export const Button = (props: Props) => {
+  const { text, scroll, border } = props;
+
+  const scrollTo = () => {
     window.scrollTo({
-      top: this.props.scroll,
+      top: scroll,
       behavior: 'smooth'
     });
-  }
+  };
 
-  render() {
-    {
-      /*<a href={`#${this.props.scroll}`}>{this.props.value}</a>*/
-    }
-    return (
-      <button
-        onClick={this.scrollTo}
-        className="button"
-        style={this.props.border && { border: '2px solid white' }}
-      >
-        {this.props.value}
-      </button>
-    );
-  }
-}
-
-Button.propTypes = {
-  value: PropTypes.string,
-  scroll: PropTypes.number,
-  section: PropTypes.string,
-  border: PropTypes.bool
+  return (
+    <button
+      onClick={scrollTo}
+      className="button"
+      style={border && { border: '2px solid white' }}
+    >
+      {text}
+    </button>
+  );
 };
-
-export default Button;

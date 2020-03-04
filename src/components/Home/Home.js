@@ -1,22 +1,17 @@
-import React, { Component } from 'react';
+// @flow
+import * as React from 'react';
 import './Home.css';
 import HeadImg from '../../images/headimage.png';
 
-class Home extends Component {
-  render() {
-    return (
-      <div className="home">
-        <div>
-          <div className="text-big">HI</div>
-          <div className="text">
-            I AM ANDREAS
-            <br />A FRONT-END DEVELOPER
-          </div>
-        </div>
-        <img className="headImage" src={HeadImg} alt="Profile" />
+export const Home = () => (
+  <div className="home">
+    <div>
+      <div className="text-big">HI</div>
+      <div className="text">
+        I AM ANDREAS
+        <br />A FRONT-END DEVELOPER
       </div>
-    );
-  }
-}
-
-export default Home;
+    </div>
+    <img className="headImage" src={HeadImg} alt="Profile" />
+  </div>
+);

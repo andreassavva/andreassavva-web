@@ -1,24 +1,16 @@
-import React, { Component } from 'react';
-import Button from '../Button/Button';
+// @flow
+import * as React from 'react';
 import './Header.css';
+import { Button } from '../Button/Button';
 
-class Header extends Component {
-  render() {
-    return (
-      <div className="header">
-        <Button scroll={0} value="HOME" />
-        <Button
-          scroll={document.documentElement.clientHeight}
-          value="SKILLSET"
-        />
-        <Button
-          scroll={document.documentElement.clientHeight}
-          value="LET'S TALK"
-          border
-        />
-      </div>
-    );
-  }
-}
-
-export default Header;
+export const Header = () => (
+  <div className="header">
+    <Button scroll={0} text="HOME" />
+    <Button scroll={document.documentElement?.clientHeight} text="SKILLSET" />
+    <Button
+      scroll={document.documentElement?.clientHeight}
+      text="LET'S TALK"
+      border
+    />
+  </div>
+);
