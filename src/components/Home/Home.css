@@ -1,10 +1,19 @@
 .home {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  flex-grow: 0;
+  justify-content: space-between;
   align-items: center;
   background-color: #1a1a1a;
   height: 100vh;
+}
+
+.typer-container {
+  padding: 100px;
+}
+
+.image-container {
+  padding: 50px;
 }
 
 .headImage {

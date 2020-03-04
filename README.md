@@ -1,5 +1,5 @@
-## So you liked my website?
+## So you like my website?
 
-Thanks for taking the time to check out the source code to my site. Feel free to browse the files, I am always open for feedback. 🚀
+🎉 Thanks for taking the time to check out the source code to my site. Feel free to browse the files, I am always open for feedback.
 
-[Shoot me an email!](mailto:andreas.k.savva@gmail.com)
+🚀 Shoot me an email: <andreas.k.savva@gmail.com>

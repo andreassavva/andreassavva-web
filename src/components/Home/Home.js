@@ -6,9 +6,11 @@ import { Typer } from '../Typer/Typer';
 
 export const Home = () => (
   <div className="home">
-    <div>
+    <div className="typer-container">
       <Typer />
     </div>
-    <img className="headImage" src={HeadImg} alt="Profile" />
+    <div className="image-container">
+      <img className="headImage" src={HeadImg} alt="Profile" />
+    </div>
   </div>
 );
