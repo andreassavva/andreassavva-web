@@ -2,18 +2,28 @@
 import * as React from 'react';
 import './Header.css';
 import { HeaderButton } from '../HeaderButton/HeaderButton';
+import { viewObjects } from '../../App';
 
-export const Header = () => (
-  <div className="header">
-    <HeaderButton scroll={0} text="HOME" />
-    <HeaderButton
-      scroll={document.documentElement?.clientHeight}
-      text="SKILLSET"
-    />
-    <HeaderButton
-      scroll={document.documentElement?.clientHeight}
-      text="LET'S TALK"
-      border
-    />
-  </div>
-);
+export const Header = () => {
+  const [windowHeight, setWindowHeight] = React.useState(window.innerHeight);
+
+  React.useEffect(() => {
+    window.addEventListener('resize', () => onWindowResize());
+    return window.removeEventListener('resize', () => onWindowResize());
+  }, []);
+
+  const onWindowResize = () => setWindowHeight(window.innerHeight);
+
+  return (
+    <div className="header">
+      {viewObjects.map((view, index) => (
+        <HeaderButton
+          key={`HeaderButton__${index}`}
+          text={view.text}
+          border={view.buttonBorder}
+          scroll={index * windowHeight}
+        />
+      ))}
+    </div>
+  );
+};

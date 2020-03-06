@@ -22,9 +22,9 @@ export const HeaderButton = (props: Props) => {
     <button
       onClick={scrollTo}
       className="button"
-      style={border && { border: '2px solid white' }}
+      style={border ? { border: '2px solid white' } : undefined}
     >
-      {text}
+      {text.toUpperCase()}
     </button>
   );
 };

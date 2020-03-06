@@ -2,7 +2,7 @@
 import * as React from 'react';
 import './Home.css';
 import HeadImg from '../../images/headimage.png';
-import { Typer } from '../Typer/Typer';
+import { Typer } from '../../components/Typer/Typer';
 
 export const Home = () => (
   <div className="home">

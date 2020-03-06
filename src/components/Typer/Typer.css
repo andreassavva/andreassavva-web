@@ -1,8 +1,11 @@
 .container {
-  font-size: calc(2vh + 2vw);
+  font-size: 20px;
   font-family: monospace;
   color: yellow;
-  line-height: 9vh;
+  line-height: 30px;
+  white-space: pre-wrap;
+  text-align: left;
+  height: 100%;
 }
 
 .cursor {
@@ -13,5 +16,19 @@
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    font-size: 20px;
+    line-height: 35px;
   }
 }
